@@ -22,7 +22,7 @@ Button btn1, btn2;
             public void onClick(View view) {
                 FragmentManager manager=getSupportFragmentManager();
                 FragmentTransaction transaction=manager.beginTransaction();
-                transaction.replace(R.id.Fragment1, new ProfileInfo());
+                transaction.replace(R.id.Frame1, new ProfileInfo());
                 transaction.commit();
             }
         });
@@ -32,7 +32,8 @@ Button btn1, btn2;
             public void onClick(View view) {
                 FragmentManager manager=getSupportFragmentManager();
                 FragmentTransaction transaction=manager.beginTransaction();
-                transaction.replace(R.id.Fragment1, new AcademicInfo());
+                transaction.replace(R.id.Frame1, new AcademicInfo());
+                transaction.addToBackStack(null);
                 transaction.commit();
             }
         });
