@@ -27,6 +27,7 @@ Button btn1, btn2,btn3;
                 FragmentManager manager=getSupportFragmentManager();
                 FragmentTransaction transaction=manager.beginTransaction();
                 transaction.replace(R.id.Frame1, new Studentid());
+                transaction.addToBackStack(null);
                 transaction.commit();
             }
         });
@@ -36,6 +37,7 @@ Button btn1, btn2,btn3;
                 FragmentManager manager=getSupportFragmentManager();
                 FragmentTransaction transaction=manager.beginTransaction();
                 transaction.replace(R.id.Frame1, new ProfileInfo());
+                transaction.addToBackStack(null);
                 transaction.commit();
             }
         });
